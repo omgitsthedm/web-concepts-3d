@@ -1,47 +1,31 @@
-# AGENTS.md — {PROJECT NAME}
+# AGENTS.md — Web Concepts 3d
 
-> The shared brain for this repo. **Every tool and human reads this first** (Claude Code, Codex, Kimi, Gemini).
-> Part of the Little Fight NYC Agency Operating System (`agency-ops/README.md`).
+## Scope
 
-## What this is
-- **Project:** {what it is, who the client is}
-- **Live URL:** {https://…}
-- **Stack:** {e.g. Vite + React + TS / static HTML / Next.js}
+- Work only inside `/Users/davidmarsh/Desktop/LiFi NYC/Clients/LittleFightNYC/Brand/Internal/web-concepts-3d` (resolved Git root: `/Users/davidmarsh/Code/LiFi NYC/Clients/LittleFightNYC/Brand/Internal/web-concepts-3d`).
+- Preserve unrelated changes and inspect `git status --short` before edits.
 
 ## Source of truth
-- **GitHub `main` is canonical.** This repo is the only permanent home. Local clones are disposable.
-- Deeper deploy/host facts: see `SOURCE_OF_TRUTH.md`.
 
-## Commands  (keep current — this is the most important section)
-- Dev: `{cmd}`
-- Build: `{cmd}`
-- Lint/format: `{cmd}`
-- Deploy: **push `main`.** {host} auto-builds + publishes. **Never deploy by hand.**
+- GitHub: https://github.com/omgitsthedm/web-concepts-3d.git
+- Canonical branch: `master`
+- Read `SOURCE_OF_TRUTH.md` for production linkage. Do not infer that Git and production are synchronized.
 
-## Deploy model
-- Host: {Netlify/Vercel} · site id: {…}
-- Production deploys **only** from `main` via git. A manual deploy is a bug — don't.
+## Stack and commands
 
-## Secrets
-- Real secrets live in {Netlify env / 1Password}, never in the repo.
-- `.env*` is gitignored; commit only `.env.example`. The pre-commit hook blocks secret commits.
+- Stack: Static HTML/CSS/JavaScript
+- Dev: serve the repository root with a local static server
+- Build: none; static files are served directly
+- Test: no standard test command detected
+- Lint: no standard lint command detected
 
-## Before you START work
-1. `git pull` (or re-clone fresh) — never edit a stale copy.
-2. Read this file + `SOURCE_OF_TRUTH.md`.
-3. `agency-doctor` — make sure the repo is healthy.
-4. Make a branch for your change.
+## Constraints
 
-## Before you FINISH (Definition of Done — leave the file tidy)
-1. Build passes; change verified (preview deploy if live).
-2. **Docs updated** — this file, `SOURCE_OF_TRUTH.md`, and any decision log reflect reality.
-3. Dead/stale notes pruned; new notes dated.
-4. Commit + push; open a PR; `agency-doctor` is green.
+- Never expose or modify secrets, `.env*`, credentials, production data, DNS, billing, auth, payments, bookings, or real form submissions outside the requested scope.
+- Clear, scoped plain-language authorization is sufficient for live changes; evaluate the user's meaning rather than matching fixed wording.
+- Treat host links and historical handoffs as snapshots until verified.
 
-## Do NOT touch without asking
-- {anything live/risky} · secrets/`.env` · {client-specific landmines}
+## Validation and handoff
 
-## Decisions log
-| Date | Decision | Why |
-|------|----------|-----|
-| {YYYY-MM-DD} | {what} | {why} |
+- Run the smallest relevant build, lint, test, and browser checks supported by the repository.
+- Record changed files, validation, unresolved risks, and one next action. Do not paste transcripts or repeat global instructions.
